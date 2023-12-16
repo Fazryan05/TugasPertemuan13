@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Sederhana</title>
+</head>
+<style>
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 0%;
+    background-color: gray;
+    flex-direction: column;
+    
+}
+.container {
+    justify-content: center;
+    align-items: center;
+    padding: 0px 150px 50px;
+    background: grey;
+    box-shadow: 0 5px 10px;
+}
+.button {
+    display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  border-radius: 20px;
+  box-shadow: 50px;
+
+ 
+    }
+
+</style>
+<body>
+    <div class="container">
+        <h2>SIMPLE CALCULATOR</h2>
+            <label for="bilangan1"><b>BILANGAN 1 :</label>
+        <br>
+    <input type="text" id="bilangan1" class="display">
+        <br><br>
+            <label for="bilangan2">BILANGAN 2 :</label>
+            <br>
+            <input type="text" id="bilangan2" class="display">
+            <br>
+            <br>
+            <br>
+            <div class="button">
+  <button onclick="hitung()"><b>+</b></button>
+  <button onclick="hitungpengurangan()"><b>-</b></button>
+  <button onclick="hitungperkalian()"><b>*</b></button>
+  <button onclick="hitungpembagian()"><b>/</b></button>
+  <button onclick="hitungpemangkatan()"><b>**</b></button>
+  <button onclick="hitungsisabagi()"><b>%</b></button>
+  </div>
+
+
+  <script>
+    alert("Hello, it's Fazryan Ananda Kurniawan");
+    function hitung() {
+      // Mengambil nilai dari input
+      var bilangan1 = parseFloat(document.getElementById("bilangan1").value);
+      var bilangan2 = parseFloat(document.getElementById("bilangan2").value);
+
+      // Memeriksa apakah kedua nilai adalah angka yang valid
+      if (isNaN(bilangan1) || isNaN(bilangan2)) {
+        alert("Masukkan angka yang valid");
+        return;
+      }
+
+      // Melakukan penjumlahan
+      var hasil = bilangan1 + bilangan2;
+
+      // Menampilkan hasil menggunakan alert
+      alert("Hasil penjumlahan : " + hasil);
+    }
+
+    function hitungpengurangan() {
+      // Mengambil nilai dari input
+      var bilangan1 = parseFloat(document.getElementById("bilangan1").value);
+      var bilangan2 = parseFloat(document.getElementById("bilangan2").value);
+
+      // Memeriksa apakah kedua nilai adalah angka yang valid
+      if (isNaN(bilangan1) || isNaN(bilangan2)) {
+        alert("Masukkan angka yang valid");
+        return;
+      }
+
+      // Melakukan pengurangan
+      var hasil = bilangan1 - bilangan2;
+
+      // Menampilkan hasil menggunakan alert
+      alert("Hasil pengurangan : " + hasil);
+    }
+
+    function hitungperkalian() {
+      // Mengambil nilai dari input
+      var bilangan1 = parseFloat(document.getElementById("bilangan1").value);
+      var bilangan2 = parseFloat(document.getElementById("bilangan2").value);
+
+      // Memeriksa apakah kedua nilai adalah angka yang valid
+      if (isNaN(bilangan1) || isNaN(bilangan2)) {
+        alert("Masukkan angka yang valid");
+        return;
+      }
+
+      // Melakukan perkalian
+      var hasil = bilangan1 * bilangan2;
+
+      // Menampilkan hasil menggunakan alert
+      alert("Hasil perkalian : " + hasil);
+    }
+
+    function hitungpembagian() {
+      // Mengambil nilai dari input
+      var bilangan1 = parseFloat(document.getElementById("bilangan1").value);
+      var bilangan2 = parseFloat(document.getElementById("bilangan2").value);
+
+      // Memeriksa apakah kedua nilai adalah angka yang valid
+      if (isNaN(bilangan1) || isNaN(bilangan2)) {
+        alert("Masukkan angka yang valid");
+        return;
+      }
+
+      // Melakukan pembagian
+      var hasil = bilangan1 / bilangan2;
+
+      // Menampilkan hasil menggunakan alert
+      alert("Hasil pembagian: " + hasil);
+    }
+
+    function hitungpemangkatan() {
+      // Mengambil nilai dari input
+      var bilangan1 = parseFloat(document.getElementById("bilangan1").value);
+      var bilangan2 = parseFloat(document.getElementById("bilangan2").value);
+
+      // Memeriksa apakah kedua nilai adalah angka yang valid
+      if (isNaN(bilangan1) || isNaN(bilangan2)) {
+        alert("Masukkan angka yang valid");
+        return;
+      }
+
+      // Melakukan pemangkatan
+      var hasil = bilangan1 ** bilangan2;
+
+      // Menampilkan hasil menggunakan alert
+      alert("Hasil permangkatan: " + hasil);
+    }
+
+    function hitungsisabagi() {
+      // Mengambil nilai dari input
+      var bilangan1 = parseFloat(document.getElementById("bilangan1").value);
+      var bilangan2 = parseFloat(document.getElementById("bilangan2").value);
+
+      // Memeriksa apakah kedua nilai adalah angka yang valid
+      if (isNaN(bilangan1) || isNaN(bilangan2)) {
+        alert("Masukkan angka yang valid");
+        return;
+      }
+
+      // Melakukan Sisa bagi
+      var hasil = bilangan1 % bilangan2;
+
+      // Menampilkan hasil menggunakan alert
+      alert("Hasil sisa bagi: " + hasil);
+    }
+  </script>
+
+</body>
+</html>
